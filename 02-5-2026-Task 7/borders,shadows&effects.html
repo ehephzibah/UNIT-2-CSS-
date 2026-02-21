@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Borders and Shadow Effects</title>
+
+    <style>
+        /* Basic box */
+        .box {
+            width: 200px;
+            height: 100px;
+            background-color: lightblue;
+            margin: 20px;
+            padding: 20px;
+        }
+
+        /* Border radius */
+        .radius-box {
+            border: 3px solid black;
+            border-radius: 20px;
+        }
+
+        /* Circle using border radius */
+        .circle {
+            width: 100px;
+            height: 100px;
+            background-color: coral;
+            border-radius: 50%;
+        }
+
+        /* Box shadow */
+        .shadow-box {
+            border: 2px solid black;
+            box-shadow: 5px 5px 10px gray;
+        }
+
+        /* Strong shadow */
+        .shadow-strong {
+            border: 2px solid black;
+            box-shadow: 0px 0px 20px black;
+        }
+
+        /* Outline */
+        .outline-box {
+            border: 2px solid black;
+            outline: 4px solid red;
+            outline-offset: 5px;
+        }
+
+        /* Opacity */
+        .opacity-box {
+            background-color: green;
+            opacity: 0.5;
+        }
+
+        /* Hover effect */
+        .hover-box {
+            border: 2px solid black;
+        }
+
+        .hover-box:hover {
+            box-shadow: 0px 0px 15px blue;
+            border-radius: 15px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <h2>Border Radius</h2>
+    <div class="box radius-box">Rounded corners</div>
+
+    <h2>Circle Shape</h2>
+    <div class="circle"></div>
+
+    <h2>Box Shadow</h2>
+    <div class="box shadow-box">Shadow effect</div>
+
+    <h2>Strong Shadow</h2>
+    <div class="box shadow-strong">Glow shadow</div>
+
+    <h2>Outline Effect</h2>
+    <div class="box outline-box">Outline example</div>
+
+    <h2>Opacity Effect</h2>
+    <div class="box opacity-box">Opacity 0.5</div>
+
+    <h2>Hover Effect</h2>
+    <div class="box hover-box">Hover over me</div>
+
+</body>
+
+</html>

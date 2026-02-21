@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Transition and Hover Effects</title>
+
+    <style>
+        /* Basic button */
+        .button {
+            background-color: blue;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            cursor: pointer;
+
+            /* transition property */
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        /* Hover effect */
+        .button:hover {
+            background-color: red;
+            transform: scale(1.1);
+        }
+
+        /* Box with smooth transition */
+        .box {
+            width: 150px;
+            height: 150px;
+            background-color: green;
+            margin-top: 20px;
+
+            transition: all 0.5s;
+        }
+
+        .box:hover {
+            background-color: orange;
+            border-radius: 50%;
+        }
+
+        /* Image hover zoom */
+        .image {
+            width: 200px;
+
+            transition: transform 0.5s;
+        }
+
+        .image:hover {
+            transform: scale(1.2);
+        }
+
+        /* Card hover effect */
+        .card {
+            width: 200px;
+            padding: 20px;
+            border: 1px solid black;
+
+            transition: box-shadow 0.3s;
+        }
+
+        .card:hover {
+            box-shadow: 0px 0px 15px gray;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <h2>Button Hover Effect</h2>
+    <button class="button">Hover Me</button>
+
+    <h2>Box Transition</h2>
+    <div class="box"></div>
+
+    <h2>Image Zoom Effect</h2>
+    <img src="https://via.placeholder.com/200" class="image">
+
+    <h2>Card Hover Effect</h2>
+    <div class="card">
+        Hover this card
+    </div>
+
+</body>
+
+</html>

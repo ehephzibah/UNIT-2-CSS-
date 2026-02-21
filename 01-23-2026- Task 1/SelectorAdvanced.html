@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced CSS Selectors</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+        }
+
+
+        [title] {
+            color: darkgreen;
+            font-style: italic;
+        }
+
+
+        div p span {
+            color: purple;
+            font-weight: bold;
+        }
+
+
+        ul>li {
+            list-style-type: square;
+            margin-left: 20px;
+        }
+
+
+        nav a:hover {
+            color: orange;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <a href="SelectorBasic.html" title="Home link">Home</a>
+        <a href="color.html" title="About link">About</a>
+
+    </nav>
+
+    <div>
+        <p>This is a <span>descendant span</span> inside a paragraph.</p>
+        <p title="Special paragraph">This paragraph has a title attribute.</p>
+    </div>
+
+    <ul>
+        <li>Direct child item 1</li>
+        <li>Direct child item 2
+            <ul>
+                <li>Nested child item (not direct)</li>
+            </ul>
+        </li>
+        <li>Direct child item 3</li>
+    </ul>
+</body>
+
+</html>

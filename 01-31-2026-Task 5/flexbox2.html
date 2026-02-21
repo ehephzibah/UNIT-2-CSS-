@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Flexbox Advanced</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        h2 {
+            margin-top: 40px;
+        }
+
+        .flex-container {
+            display: flex;
+            padding: 10px;
+            margin-bottom: 30px;
+            border: 1px solid #ccc;
+            background-color: #f0f0f0;
+        }
+
+        .flex-item {
+            background-color: #6a5acd;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            flex: 0 0 100px;
+        }
+
+
+        .align-start {
+            align-items: flex-start;
+            height: 150px;
+        }
+
+        .align-center {
+            align-items: center;
+            height: 150px;
+        }
+
+        .align-end {
+            align-items: flex-end;
+            height: 150px;
+        }
+
+        .align-stretch {
+            align-items: stretch;
+            height: 150px;
+        }
+
+
+        .no-wrap {
+            flex-wrap: nowrap;
+        }
+
+        .wrap {
+            flex-wrap: wrap;
+        }
+
+
+        .gap {
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+
+        .order-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .order-item:nth-child(1) {
+            order: 3;
+            background-color: #ff7f50;
+        }
+
+        .order-item:nth-child(2) {
+            order: 1;
+            background-color: #00bfff;
+        }
+
+        .order-item:nth-child(3) {
+            order: 4;
+            background-color: #32cd32;
+        }
+
+        .order-item:nth-child(4) {
+            order: 2;
+            background-color: #ff69b4;
+        }
+
+        .order-item {
+            flex: 0 0 100px;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Align Items</h2>
+    <div class="flex-container align-start">
+        <div class="flex-item">Item 1</div>
+        <div class="flex-item">Item 2</div>
+        <div class="flex-item">Item 3</div>
+    </div>
+
+    <div class="flex-container align-center">
+        <div class="flex-item">Item 1</div>
+        <div class="flex-item">Item 2</div>
+        <div class="flex-item">Item 3</div>
+    </div>
+
+    <div class="flex-container align-end">
+        <div class="flex-item">Item 1</div>
+        <div class="flex-item">Item 2</div>
+        <div class="flex-item">Item 3</div>
+    </div>
+
+    <div class="flex-container align-stretch">
+        <div class="flex-item">Item 1</div>
+        <div class="flex-item">Item 2</div>
+        <div class="flex-item">Item 3</div>
+    </div>
+
+    <h2>Flex Wrap & Gap</h2>
+    <div class="flex-container wrap gap">
+        <div class="flex-item">1</div>
+        <div class="flex-item">2</div>
+        <div class="flex-item">3</div>
+        <div class="flex-item">4</div>
+        <div class="flex-item">5</div>
+        <div class="flex-item">6</div>
+    </div>
+
+    <h2>Order Property</h2>
+    <div class="order-container">
+        <div class="order-item">1</div>
+        <div class="order-item">2</div>
+        <div class="order-item">3</div>
+        <div class="order-item">4</div>
+    </div>
+</body>
+
+</html>

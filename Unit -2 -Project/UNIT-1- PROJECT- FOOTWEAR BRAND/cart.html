@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Walk Wave: Shopping Cart</title>
+    <link rel="icon" href="download.svg" type="image/svg">
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Segoe UI", Arial, sans-serif;
+        }
+
+        :root {
+            --bg-main: #f3efe9;
+            --bg-dark: #3e2c1c;
+            --bg-card: #ffffff;
+            --accent: #b86b3c;
+            --accent-soft: #d8a47f;
+            --text-dark: #2b2b2b;
+            --text-light: #ffffff;
+            --text-muted: #6b625b;
+        }
+
+        html,
+        body {
+            max-width: 100%;
+            overflow-x: hidden;
+        }
+
+        body {
+            background-color: var(--bg-main);
+            color: var(--text-dark);
+            padding-top: 110px;
+        }
+
+
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: var(--bg-dark);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 40px;
+            z-index: 1000;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo img {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            border: 2px solid var(--accent-soft);
+        }
+
+        .logo h2 {
+            color: var(--text-light);
+            letter-spacing: 3px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--text-light);
+            font-weight: 600;
+            margin: 0 12px;
+            font-size: 14px;
+        }
+
+        nav a:hover {
+            color: var(--accent-soft);
+        }
+
+        .signin {
+            color: var(--accent-soft);
+        }
+
+        .page-title {
+            text-align: center;
+            margin: 30px 0;
+            letter-spacing: 4px;
+            color: var(--bg-dark);
+        }
+
+
+        .cart-container {
+            display: grid;
+            grid-template-columns: 1fr 320px;
+            gap: 30px;
+            width: 90%;
+            max-width: 1100px;
+            margin: 0 auto 50px;
+        }
+
+        .cart-item {
+            background: var(--bg-card);
+            border-radius: 14px;
+            padding: 20px;
+            display: grid;
+            grid-template-columns: 200px 1fr;
+            gap: 25px;
+            align-items: center;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .cart-item img {
+            width: 200px;
+            height: 280px;
+            object-fit: cover;
+            border-radius: 12px;
+        }
+
+        .item-details label {
+            display: block;
+            margin: 8px 0;
+            color: var(--text-muted);
+        }
+
+        .item-details strong {
+            color: var(--text-dark);
+            font-size: 17px;
+        }
+
+        .price {
+            font-size: 18px;
+            font-weight: bold;
+            color: var(--accent);
+        }
+
+
+        .item-actions {
+            margin-top: 15px;
+        }
+
+        .qty {
+            display: flex;
+            align-items: center;
+            border: 1px solid var(--bg-dark);
+            border-radius: 20px;
+            overflow: hidden;
+        }
+
+        .qty button {
+            background: transparent;
+            border: none;
+            padding: 8px 14px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+
+        .qty input {
+            width: 40px;
+            text-align: center;
+            border: none;
+            font-weight: bold;
+            background: transparent;
+        }
+
+
+        .item-actions input {
+            padding: 8px 14px;
+            border-radius: 20px;
+            border: 1px solid var(--bg-dark);
+            background: transparent;
+            cursor: pointer;
+            margin-right: 8px;
+            font-weight: 600;
+        }
+
+        .item-actions input:hover {
+            background: var(--accent-soft);
+            border-color: var(--accent-soft);
+        }
+
+
+        .summary {
+            background: var(--bg-card);
+            border-radius: 14px;
+            padding: 22px;
+            height: fit-content;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .summary h3 {
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+
+        .summary input[type="submit"] {
+            width: 100%;
+            padding: 12px;
+            border-radius: 25px;
+            border: none;
+            background: var(--bg-dark);
+            color: var(--text-light);
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .summary input[type="submit"]:hover {
+            background: var(--accent);
+        }
+
+        @media (max-width: 900px) {
+
+            body {
+                padding-top: 160px;
+            }
+
+            header {
+                flex-direction: column;
+                gap: 10px;
+                padding: 15px 15px;
+
+                text-align: center;
+            }
+
+            nav {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 10px;
+            }
+
+            .cart-container {
+                grid-template-columns: 1fr;
+            }
+
+            .cart-item {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .cart-item img {
+                margin: 0 auto;
+                width: 100%;
+                max-width: 260px;
+                height: auto;
+            }
+
+            .item-actions {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 8px;
+            }
+
+            .item-actions input[type="number"] {
+                width: 60px;
+
+                text-align: center;
+            }
+        }
+
+        footer {
+            background: var(--bg-dark);
+            color: var(--text-light);
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        footer h2 {
+            letter-spacing: 4px;
+            margin-bottom: 25px;
+        }
+
+        footer nav a,
+        footer nav span {
+            color: #d2c7bc;
+            font-size: 14px;
+            margin: 0 12px;
+            text-decoration: none;
+        }
+
+        footer nav a:hover {
+            color: var(--accent-soft);
+        }
+
+        footer p {
+            margin-top: 25px;
+            font-size: 13px;
+            color: #b8ada2;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">
+            <img src="download.jpg" alt="Walk Wave Logo">
+            <h2>WALK WAVE</h2>
+        </div>
+
+        <nav>
+            <a href="footwear.html">HOME</a>
+            <a href="men.html">MEN</a>
+            <a href="women.html">WOMEN</a>
+            <a href="sale.html">SALE</a>
+            <a href="cart.html">🛒</a>
+            <a href="login.html" class="signin">Hello, Sign in</a>
+        </nav>
+    </header>
+
+    <h1 class="page-title">SHOPPING CART</h1>
+
+    <div class="cart-container">
+        <div>
+            <div class="cart-item">
+                <img src="13.jpg">
+                <div class="item-details">
+                    <label><strong>Ivory Line Formal Loafers</strong></label>
+                    <label>Elegant cream loafers for refined formal wear.</label>
+                    <label class="price">₹234</label>
+                    <div class="item-actions">
+
+                        <input type="button" value="+ 1 -">
+                        <input type="button" value="Delete">
+                        <input type="button" value="Save for later">
+                    </div>
+                </div>
+            </div>
+
+            <br>
+
+            <div class="cart-item">
+                <img src="9.jpg">
+                <div class="item-details">
+                    <label><strong>Ivory Line Formal Loafers</strong></label>
+                    <label>Elegant cream loafers for professional occasions.</label>
+                    <label class="price">₹249</label>
+                    <div class="item-actions">
+                        <input type="button" value="+ 1 -">
+
+                        <input type="button" value="Delete">
+                        <input type="button" value="Save for later">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="summary">
+            <h3>Subtotal: ₹483</h3>
+            <input type="submit" value="Proceed to Buy (2 items)">
+        </div>
+    </div>
+
+</body>
+<footer>
+    <h2>WALK WAVE</h2>
+    <nav>
+        <a href="about.html">About Us</a>
+        <span>Careers</span>
+        <span>Blogs</span>
+        <a href="contact.html">Contact</a>
+    </nav>
+    <p>© WalkWave.com</p>
+</footer>
+
+</html>

@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Walk Wave | About Us</title>
+    <link rel="icon" href="download.svg">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Segoe UI", Arial, sans-serif;
+        }
+
+
+        :root {
+            --bg-main: #f3efe9;
+            --bg-dark: #3e2c1c;
+            --bg-card: #e7dfd3;
+            --accent: #b86b3c;
+            --accent-soft: #d8a47f;
+            --text-dark: #2b2b2b;
+            --text-light: #ffffff;
+            --text-muted: #6b625b;
+        }
+
+        body {
+            background-color: var(--bg-main);
+            color: var(--text-dark);
+        }
+
+
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: var(--bg-dark);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 40px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            z-index: 1000;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            cursor: pointer;
+        }
+
+        .logo img {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid var(--accent-soft);
+        }
+
+        .logo h2 {
+            color: var(--text-light);
+            letter-spacing: 3px;
+            font-weight: 700;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--text-light);
+            font-weight: 600;
+            margin: 0 12px;
+            font-size: 14px;
+        }
+
+        nav a:hover {
+            color: var(--accent-soft);
+        }
+
+        .signin {
+            color: var(--accent-soft);
+        }
+
+
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                padding: 15px 20px;
+                gap: 12px;
+            }
+
+            nav {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 10px;
+            }
+
+            nav a {
+                margin: 0;
+                font-size: 13px;
+            }
+
+            .logo h2 {
+                font-size: 18px;
+            }
+        }
+
+
+        main {
+            margin-top: 110px;
+            max-width: 1100px;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        main h1 {
+            letter-spacing: 3px;
+            margin-bottom: 20px;
+        }
+
+        main p {
+            max-width: 900px;
+            margin: 15px auto;
+            color: var(--text-muted);
+            font-size: 16px;
+            line-height: 1.8;
+        }
+
+        .hero-img {
+            width: 100%;
+            max-width: 850px;
+            margin: 40px auto;
+            border-radius: 14px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .values {
+            margin-top: 50px;
+            text-align: left;
+        }
+
+        .values h2 {
+            margin-top: 40px;
+            color: var(--bg-dark);
+            letter-spacing: 2px;
+        }
+
+
+        footer {
+            background: var(--bg-dark);
+            color: var(--text-light);
+            text-align: center;
+            padding: 50px 20px;
+            margin-top: 80px;
+        }
+
+        footer h2 {
+            letter-spacing: 4px;
+            margin-bottom: 25px;
+        }
+
+        footer nav a,
+        footer nav span {
+            color: #d2c7bc;
+            font-size: 14px;
+            margin: 0 12px;
+            text-decoration: none;
+        }
+
+        footer nav a:hover {
+            color: var(--accent-soft);
+        }
+
+        footer p {
+            margin-top: 25px;
+            font-size: 13px;
+            color: #b8ada2;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <header>
+        <div class="logo">
+            <img src="download.jpg" alt="Walk Wave Logo">
+            <h2>WALK WAVE</h2>
+        </div>
+
+        <nav>
+            <a href="footwear.html">HOME</a>
+            <a href="men.html">MEN</a>
+            <a href="women.html">WOMEN</a>
+            <a href="sale.html">SALE</a>
+            <a href="cart.html">🛒</a>
+            <a href="login.html" class="signin">Hello, Sign in</a>
+        </nav>
+    </header>
+
+
+    <main>
+        <h1>ABOUT US</h1>
+        <h1>Walkwave: The SOLE & SOUL of Young India</h1>
+
+        <p>
+            We at Walkwave harbour a Tribe of Walkers as we strive towards our ambition
+            to deliver the best range of footwear and become India’s most preferred footwear brand.
+        </p>
+
+        <img src="16.jpg" class="hero-img" alt="About Walkwave">
+
+        <h1>OUR STORY</h1>
+        <p>
+            Walking is the simplest solution to staying active and healthy.
+            At Walkwave, every step we take is towards building a more active,
+            connected and thriving community.
+        </p>
+
+        <h1>OUR VALUES</h1>
+        <img src="17.jpg" class="hero-img" alt="Our Values">
+
+        <div class="values">
+            <h2>• Democratizing Fashion</h2>
+            <p>Affordable footwear for everyone — fashion without limits.</p>
+
+            <h2>• Spirit of Maximization</h2>
+            <p>We chase excellence with energy, ambition and infinite drive.</p>
+
+            <h2>• Partnering Progress</h2>
+            <p>Empowering communities through sustainability and CSR.</p>
+
+            <h2>• Transparency & Honesty</h2>
+            <p>Trust, quality and integrity define Walkwave.</p>
+        </div>
+    </main>
+
+
+    <footer>
+        <h2>WALK WAVE</h2>
+        <nav>
+            <a href="about.html">About Us</a>
+            <span>Careers</span>
+            <span>Blogs</span>
+            <a href="contact.html">Contact</a>
+        </nav>
+        <p>© WalkWave.com</p>
+    </footer>
+
+</body>
+
+</html>

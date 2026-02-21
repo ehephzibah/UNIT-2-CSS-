@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Walk Wave | Login</title>
+    <link rel="icon" href="download.svg" type="image/svg">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Segoe UI", Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f4efe9;
+
+            color: #2b2b2b;
+        }
+
+        html,
+        body {
+            max-width: 100%;
+            overflow-x: hidden;
+        }
+
+        header {
+            background-color: #2f241c;
+
+            padding: 16px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo img {
+            width: 46px;
+            height: 46px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid #d6b25e;
+
+        }
+
+        .logo h2 {
+            letter-spacing: 3px;
+            font-size: 20px;
+            color: #f5efe6;
+
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #f5efe6;
+            font-weight: 600;
+            margin-left: 22px;
+            font-size: 14px;
+            letter-spacing: 1px;
+        }
+
+        nav a:hover {
+            color: #d6b25e;
+
+        }
+
+
+        section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: calc(100svh - 90px);
+
+        }
+
+        fieldset {
+            width: 360px;
+            background-color: #fffaf3;
+            border: 1px solid #e0d6c8;
+            border-radius: 12px;
+            padding: 30px;
+        }
+
+        fieldset h1 {
+            font-size: 26px;
+            margin-bottom: 8px;
+        }
+
+        fieldset h3 {
+            font-weight: normal;
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        fieldset label {
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        input[type="email"] {
+            width: 100%;
+            padding: 10px;
+            margin-top: 6px;
+            margin-bottom: 18px;
+            border-radius: 6px;
+            border: 1px solid #bfb7a9;
+        }
+
+        input[type="submit"] {
+            width: 100%;
+            padding: 11px;
+            background-color: #d6b25e;
+            border: none;
+            border-radius: 8px;
+            font-weight: bold;
+            cursor: pointer;
+            color: #2f241c;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #c2a047;
+        }
+
+        fieldset h5 {
+            font-size: 12px;
+            color: #666;
+            margin-top: 14px;
+            line-height: 1.5;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                align-items: center;
+                padding: 14px 16px;
+                gap: 10px;
+                text-align: center;
+            }
+
+            nav {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 16px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">
+            <img src="download.jpg" alt="Walk Wave Logo">
+            <h2>WALK WAVE</h2>
+        </div>
+
+        <nav>
+            <a href="footwear.html">HOME</a>
+            <a href="men.html">MEN</a>
+            <a href="women.html">WOMEN</a>
+            <a href="sale.html">SALE</a>
+        </nav>
+    </header>
+
+
+    <section>
+        <fieldset>
+            <h1>Walkwave.in</h1>
+            <h3>Sign in or Create account</h3>
+
+            <label>Enter your email</label>
+            <input type="email" placeholder="example@email.com">
+
+            <input type="submit" value="Continue">
+
+            <h5>
+                By continuing, you agree to
+                <link>Walkwave's
+                Conditions of Use and Privacy Notice.</link>
+            </h5>
+        </fieldset>
+    </section>
+
+</body>
+
+</html>

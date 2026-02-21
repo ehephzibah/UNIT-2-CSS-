@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Box Model 2 & Layout</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        h2 {
+            margin-bottom: 10px;
+        }
+
+
+        .box-sizing-example {
+            width: 200px;
+            padding: 20px;
+            border: 5px solid #333;
+            margin-bottom: 20px;
+        }
+
+        .content-box {
+            box-sizing: content-box;
+            background-color: #ffcccc;
+        }
+
+        .border-box {
+            box-sizing: border-box;
+            background-color: #ccffcc;
+        }
+
+        /* DISPLAY TYPES */
+        .inline-box {
+            display: inline;
+            background-color: #ffd700;
+            padding: 10px;
+            margin-right: 10px;
+        }
+
+        .inline-block-box {
+            display: inline-block;
+            width: 120px;
+            height: 50px;
+            background-color: #00bfff;
+            color: white;
+            text-align: center;
+            line-height: 50px;
+            margin-right: 10px;
+        }
+
+        .block-box {
+            display: block;
+            width: 100%;
+            background-color: #ff7f50;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-bottom: 10px;
+        }
+
+        .flex-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #f0f0f0;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+
+        .flex-item {
+            background-color: #6a5acd;
+            color: white;
+            padding: 20px;
+            width: 30%;
+            text-align: center;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            /* 3 equal columns */
+            gap: 10px;
+        }
+
+        .grid-item {
+            background-color: #20b2aa;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Box Sizing Example</h2>
+    <div class="box-sizing-example content-box">
+        Content-Box: width excludes padding & border.
+    </div>
+    <div class="box-sizing-example border-box">
+        Border-Box: width includes padding & border.
+    </div>
+
+    <h2>Display Types</h2>
+    <span class="inline-box">Inline</span>
+    <span class="inline-box">Inline</span>
+    <div class="inline-block-box">Inline-Block</div>
+    <div class="inline-block-box">Inline-Block</div>
+    <div class="block-box">Block Element</div>
+    <div class="block-box">Block Element</div>
+
+    <h2>Flex Layout Exercise</h2>
+    <div class="flex-container">
+        <div class="flex-item">Flex 1</div>
+        <div class="flex-item">Flex 2</div>
+        <div class="flex-item">Flex 3</div>
+    </div>
+
+    <h2>Grid Layout Exercise</h2>
+    <div class="grid-container">
+        <div class="grid-item">Grid 1</div>
+        <div class="grid-item">Grid 2</div>
+        <div class="grid-item">Grid 3</div>
+        <div class="grid-item">Grid 4</div>
+        <div class="grid-item">Grid 5</div>
+        <div class="grid-item">Grid 6</div>
+    </div>
+</body>
+
+</html>

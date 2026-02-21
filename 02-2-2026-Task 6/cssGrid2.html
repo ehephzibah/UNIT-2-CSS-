@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid Advanced</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        h2 {
+            margin-top: 40px;
+        }
+
+
+        .grid-areas-container {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            grid-template-rows: 100px 100px;
+            grid-template-areas:
+                "header sidebar"
+                "content sidebar";
+            gap: 10px;
+            margin-bottom: 40px;
+        }
+
+        .header {
+            grid-area: header;
+            background-color: #6a5acd;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .sidebar {
+            grid-area: sidebar;
+            background-color: #ff7f50;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .content {
+            grid-area: content;
+            background-color: #20b2aa;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+
+        .auto-grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            /* change auto-fill to see difference */
+            gap: 15px;
+            margin-bottom: 40px;
+        }
+
+        .auto-grid-item {
+            background-color: #9370db;
+            color: white;
+            padding: 40px 0;
+            text-align: center;
+            font-weight: bold;
+            border-radius: 8px;
+        }
+
+
+        @media (max-width: 480px) {
+            .grid-areas-container {
+                grid-template-columns: 1fr;
+                grid-template-rows: auto;
+                grid-template-areas:
+                    "header"
+                    "sidebar"
+                    "content";
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>CSS Grid - Template Areas</h2>
+    <div class="grid-areas-container">
+        <div class="header">Header</div>
+        <div class="sidebar">Sidebar</div>
+        <div class="content">Content</div>
+    </div>
+
+    <h2>CSS Grid - Auto-fit / Auto-fill</h2>
+    <div class="auto-grid-container">
+        <div class="auto-grid-item">1</div>
+        <div class="auto-grid-item">2</div>
+        <div class="auto-grid-item">3</div>
+        <div class="auto-grid-item">4</div>
+        <div class="auto-grid-item">5</div>
+        <div class="auto-grid-item">6</div>
+        <div class="auto-grid-item">7</div>
+    </div>
+
+</body>
+
+</html>

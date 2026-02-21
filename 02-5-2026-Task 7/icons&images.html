@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Icons and Images Example</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="download.svg">
+
+    <!-- Font Awesome icon library -->
+    <link rel="stylesheet" href="stylesheet.css">
+
+    <style>
+        /* Make images responsive */
+        .responsive-img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        /* Image container */
+        .image-box {
+            width: 300px;
+            border: 2px solid black;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+
+        /* Responsive icon */
+        .icon {
+            font-size: 40px;
+            color: blue;
+        }
+
+        /* Icon hover effect */
+        .icon:hover {
+            color: red;
+        }
+
+        /* Responsive icon using vw */
+        .icon-responsive {
+            font-size: 5vw;
+            color: green;
+        }
+
+        /* Logo image responsive */
+        .logo {
+            width: 150px;
+            height: auto;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <h2>Responsive Image</h2>
+
+    <div class="image-box">
+        <img src="images.jpg" class="responsive-img">
+    </div>
+
+    <h2>Responsive Logo</h2>
+
+    <img src="images.jpgs" class="logo">
+
+    <h2>Icons Example</h2>
+
+    <i class="fa-solid fa-house icon"></i>
+
+    <i class="fa-solid fa-user icon"></i>
+
+    <h2>Responsive Icon (Viewport Based)</h2>
+
+    <i class="fa-solid fa-star icon-responsive"></i>
+
+</body>
+
+</html>

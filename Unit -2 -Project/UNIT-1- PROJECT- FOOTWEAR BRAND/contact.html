@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+<body>
+
+
+    <header>
+        <div class="logo">
+            <img src="download.jpg" alt="Walk Wave Logo">
+            <h2>WALK WAVE</h2>
+        </div>
+
+        <nav>
+            <a href="footwear.html">HOME</a>
+            <a href="men.html">MEN</a>
+            <a href="women.html">WOMEN</a>
+            <a href="sale.html">SALE</a>
+            <a href="cart.html">🛒</a>
+            <a href="login.html" class="signin">Hello, Sign in</a>
+        </nav>
+    </header>
+
+
+    <main>
+        <h1>CONTACT US</h1>
+
+        <div class="contact-box">
+            <form>
+                <input type="text" placeholder="Name" required>
+                <input type="email" placeholder="Email" required>
+                <input type="text" placeholder="Phone Number">
+                <input type="text" placeholder="Order ID">
+                <input type="text" placeholder="State">
+                <input type="text" placeholder="District">
+                <textarea placeholder="Your Message"></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+
+        <div class="address-box">
+            <h3>ADDRESS</h3>
+            <p>Walkaroo International Pvt Ltd.</p>
+            <p>Plot No 10-12, SIDCO Industrial Estate</p>
+            <p>Malumichampatti, Coimbatore – 641 050</p>
+
+            <h3>Email</h3>
+            <a href="mailto:customercare@walkwave.in">customercare@walkwave.in</a>
+
+            <h3>Phone</h3>
+            <a href="tel:+01161197311">+011-6119-7311</a>
+
+            <p>Mon – Sat : 09:00 – 18:00</p>
+        </div>
+    </main>
+
+
+    <footer>
+        <h2>WALK WAVE</h2>
+        <nav>
+            <a href="about.html">About Us</a>
+            <span>Careers</span>
+            <span>Blogs</span>
+            <a href="contact.html">Contact</a>
+        </nav>
+        <p>© WalkWave.com</p>
+    </footer>
+
+</body>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Walk Wave | Contact Us</title>
+    <link rel="icon" href="download.svg">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Segoe UI", Arial, sans-serif;
+        }
+
+
+        :root {
+            --bg-main: #f3efe9;
+            --bg-dark: #3e2c1c;
+            --bg-card: #ffffff;
+            --accent: #b86b3c;
+            --accent-soft: #d8a47f;
+            --text-dark: #2b2b2b;
+            --text-light: #ffffff;
+            --text-muted: #6b625b;
+        }
+
+        body {
+            background: var(--bg-main);
+            color: var(--text-dark);
+        }
+
+
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: var(--bg-dark);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 40px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            z-index: 1000;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            cursor: pointer;
+        }
+
+        .logo img {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            border: 2px solid var(--accent-soft);
+        }
+
+        .logo h2 {
+            color: var(--text-light);
+            letter-spacing: 3px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--text-light);
+            font-weight: 600;
+            margin: 0 12px;
+            font-size: 14px;
+        }
+
+        nav a:hover {
+            color: var(--accent-soft);
+        }
+
+        .signin {
+            color: var(--accent-soft);
+        }
+
+
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                gap: 12px;
+                padding: 15px 20px;
+            }
+
+            nav {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 10px;
+            }
+        }
+
+
+        main {
+            margin-top: 120px;
+            max-width: 1100px;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 40px 20px;
+        }
+
+        main h1 {
+            text-align: center;
+            letter-spacing: 3px;
+            margin-bottom: 40px;
+        }
+
+
+        .contact-box {
+            background: var(--bg-card);
+            padding: 40px;
+            border-radius: 14px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+            margin-bottom: 60px;
+        }
+
+        .contact-box form {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .contact-box input,
+        .contact-box textarea {
+            padding: 12px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            font-size: 14px;
+            width: 100%;
+        }
+
+        .contact-box textarea {
+            grid-column: span 2;
+            resize: none;
+            height: 120px;
+        }
+
+        .contact-box button {
+            grid-column: span 2;
+            padding: 14px;
+            border-radius: 40px;
+            border: 2px solid var(--bg-dark);
+            background: transparent;
+            font-weight: 600;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .contact-box button:hover {
+            background: var(--bg-dark);
+            color: var(--text-light);
+        }
+
+
+        .address-box {
+            background: var(--bg-card);
+            padding: 40px;
+            border-radius: 14px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+            text-align: center;
+        }
+
+        .address-box h3 {
+            letter-spacing: 2px;
+            margin-bottom: 15px;
+            color: var(--bg-dark);
+        }
+
+        .address-box p,
+        .address-box a {
+            color: var(--text-muted);
+            font-size: 15px;
+            line-height: 1.8;
+            text-decoration: none;
+        }
+
+        .address-box a:hover {
+            color: var(--accent);
+        }
+
+
+        footer {
+            background: var(--bg-dark);
+            color: var(--text-light);
+            text-align: center;
+            padding: 50px 20px;
+            margin-top: 80px;
+        }
+
+        footer h2 {
+            letter-spacing: 4px;
+            margin-bottom: 25px;
+        }
+
+        footer nav a,
+        footer nav span {
+            color: #d2c7bc;
+            font-size: 14px;
+            margin: 0 12px;
+            text-decoration: none;
+        }
+
+        footer nav a:hover {
+            color: var(--accent-soft);
+        }
+
+        footer p {
+            margin-top: 25px;
+            font-size: 13px;
+            color: #b8ada2;
+        }
+
+
+        @media (max-width: 768px) {
+            .contact-box form {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-box textarea,
+            .contact-box button {
+                grid-column: span 1;
+            }
+        }
+    </style>
+</head>
+
+
+</html>

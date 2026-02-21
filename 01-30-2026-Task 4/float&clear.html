@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Float & Clear Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        h2 {
+            margin-top: 40px;
+        }
+
+
+        .float-left {
+            float: left;
+            width: 45%;
+            margin-right: 5%;
+            background-color: #87ceeb;
+            padding: 20px;
+            color: white;
+        }
+
+        .float-right {
+            float: right;
+            width: 45%;
+            background-color: #ff7f50;
+            padding: 20px;
+            color: white;
+        }
+
+        .clear-both {
+            clear: both;
+            background-color: #90ee90;
+            padding: 15px;
+            margin-top: 10px;
+        }
+
+
+        .clearfix::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        .clearfix .box {
+            float: left;
+            width: 30%;
+            margin-right: 3.33%;
+            background-color: #6a5acd;
+            color: white;
+            padding: 20px;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .clearfix .box:last-child {
+            margin-right: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Float Left & Right</h2>
+    <div class="float-left">Float Left Box</div>
+    <div class="float-right">Float Right Box</div>
+    <div class="clear-both">Clear Both Box - Appears below floated boxes</div>
+
+    <h2>Using Clearfix for Parent Container</h2>
+    <div class="clearfix">
+        <div class="box">Box 1</div>
+        <div class="box">Box 2</div>
+        <div class="box">Box 3</div>
+    </div>
+    <div style="background-color:#ffa500; padding:15px; margin-top:10px;">
+        Parent container now contains floated children correctly (thanks to clearfix)
+    </div>
+</body>
+
+</html>

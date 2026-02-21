@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Display & Overflow</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        h2 {
+            margin-bottom: 10px;
+        }
+
+
+        .inline-box {
+            display: inline;
+            background-color: #ffd700;
+            padding: 10px;
+            margin-right: 10px;
+        }
+
+        .block-box {
+            display: block;
+            background-color: #ff7f50;
+            color: white;
+            padding: 15px;
+            margin-bottom: 10px;
+        }
+
+        .inline-block-box {
+            display: inline-block;
+            background-color: #00bfff;
+            color: white;
+            width: 120px;
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+            margin-right: 10px;
+        }
+
+        .none-box {
+            display: none;
+        }
+
+        .overflow-container {
+            width: 250px;
+            height: 100px;
+            border: 2px solid #333;
+            margin-bottom: 20px;
+            padding: 10px;
+        }
+
+        .overflow-visible {
+            overflow: visible;
+            background-color: #ffcccc;
+        }
+
+        .overflow-hidden {
+            overflow: hidden;
+            background-color: #ccffcc;
+        }
+
+        .overflow-scroll {
+            overflow: scroll;
+            background-color: #ccccff;
+        }
+
+        .overflow-auto {
+            overflow: auto;
+            background-color: #ffe680;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Display Types</h2>
+    <span class="inline-box">Inline</span>
+    <span class="inline-box">Inline</span>
+    <div class="block-box">Block Element</div>
+    <div class="inline-block-box">Inline-Block 1</div>
+    <div class="inline-block-box">Inline-Block 2</div>
+    <div class="none-box">This box is hidden (display:none)</div>
+
+    <h2>Overflow Control</h2>
+    <div class="overflow-container overflow-visible">
+        Overflow Visible: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Content spills outside the box.
+    </div>
+
+    <div class="overflow-container overflow-hidden">
+        Overflow Hidden: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Content is clipped and hidden.
+    </div>
+
+    <div class="overflow-container overflow-scroll">
+        Overflow Scroll: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Scrollbars appear to view hidden
+        content.
+    </div>
+
+    <div class="overflow-container overflow-auto">
+        Overflow Auto: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Scrollbars appear only if necessary.
+    </div>
+</body>
+
+</html>

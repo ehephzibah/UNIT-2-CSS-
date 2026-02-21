@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>CSS Animations Example</title>
+
+    <style>
+        /* 1. Basic animation box */
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+
+            animation-name: moveBox;
+            animation-duration: 3s;
+        }
+
+        /* keyframes */
+        @keyframes moveBox {
+            from {
+                background-color: blue;
+            }
+
+            to {
+                background-color: red;
+            }
+        }
+
+        /* 2. Moving animation */
+        .move {
+            width: 100px;
+            height: 100px;
+            background-color: green;
+
+            animation-name: slide;
+            animation-duration: 4s;
+        }
+
+        @keyframes slide {
+            0% {
+                left: 0px;
+                position: relative;
+            }
+
+            100% {
+                left: 300px;
+                position: relative;
+            }
+        }
+
+        /* 3. Infinite animation */
+        .circle {
+            width: 100px;
+            height: 100px;
+            background-color: orange;
+            border-radius: 50%;
+
+            animation-name: bounce;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes bounce {
+            0% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-100px);
+            }
+
+            100% {
+                transform: translateY(0);
+            }
+        }
+
+        /* 4. Delay animation */
+        .delay-box {
+            width: 100px;
+            height: 100px;
+            background-color: purple;
+
+            animation-name: colorChange;
+            animation-duration: 3s;
+            animation-delay: 2s;
+        }
+
+        @keyframes colorChange {
+            from {
+                background-color: purple;
+            }
+
+            to {
+                background-color: yellow;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <h2>Basic Animation</h2>
+    <div class="box"></div>
+
+    <h2>Moving Animation</h2>
+    <div class="move"></div>
+
+    <h2>Infinite Animation</h2>
+    <div class="circle"></div>
+
+    <h2>Delayed Animation</h2>
+    <div class="delay-box"></div>
+
+</body>
+
+</html>s

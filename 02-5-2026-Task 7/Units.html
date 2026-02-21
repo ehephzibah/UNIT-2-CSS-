@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>CSS Units Example</title>
+
+    <style>
+        /* Root font size (used for rem unit) */
+        html {
+            font-size: 16px;
+        }
+
+        /* px example */
+        .px-box {
+            width: 200px;
+            height: 100px;
+            background-color: lightblue;
+            margin-bottom: 10px;
+        }
+
+        /* percentage example */
+        .percent-box {
+            width: 50%;
+            height: 80px;
+            background-color: lightgreen;
+            margin-bottom: 10px;
+        }
+
+        /* em example */
+        .em-parent {
+            font-size: 20px;
+        }
+
+        .em-child {
+            font-size: 2em;
+            /* 2 × parent font size = 40px */
+            background-color: lightcoral;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+
+        /* rem example */
+        .rem-text {
+            font-size: 2rem;
+            /* 2 × root font size = 32px */
+            background-color: lightyellow;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+
+        /* viewport width example */
+        .vw-box {
+            width: 50vw;
+            height: 80px;
+            background-color: lightpink;
+            margin-bottom: 10px;
+        }
+
+        /* viewport height example */
+        .vh-box {
+            height: 20vh;
+            background-color: lightgray;
+            margin-bottom: 10px;
+        }
+
+        /* calc() example */
+        .calc-box {
+            width: calc(100% - 100px);
+            height: 80px;
+            background-color: orange;
+            margin-bottom: 10px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <h2>CSS Units Example</h2>
+
+    <div class="px-box">Width in px</div>
+
+    <div class="percent-box">Width in %</div>
+
+    <div class="em-parent">
+        Parent text
+        <div class="em-child">Font size in em</div>
+    </div>
+
+    <div class="rem-text">Font size in rem</div>
+
+    <div class="vw-box">Width in vw</div>
+
+    <div class="vh-box">Height in vh</div>
+
+    <div class="calc-box">Width using calc()</div>
+
+</body>
+
+</html>

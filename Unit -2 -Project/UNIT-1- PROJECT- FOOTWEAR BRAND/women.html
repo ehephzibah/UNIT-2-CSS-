@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Walk Wave | Women Footwear</title>
+    <link rel="icon" href="download.svg">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Segoe UI", Arial, sans-serif;
+        }
+
+
+        :root {
+            --bg-main: #f3efe9;
+            --bg-dark: #3e2c1c;
+            --bg-card: #ffffff;
+            --accent: #b86b3c;
+            --accent-soft: #d8a47f;
+            --text-dark: #2b2b2b;
+            --text-light: #ffffff;
+            --text-muted: #6b625b;
+        }
+
+        body {
+            background-color: var(--bg-main);
+            color: var(--text-dark);
+            padding-top: 110px;
+        }
+
+
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: var(--bg-dark);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 40px;
+            z-index: 1000;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo img {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid var(--accent-soft);
+        }
+
+        .logo h2 {
+            color: var(--text-light);
+            letter-spacing: 3px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--text-light);
+            font-weight: 600;
+            margin: 0 12px;
+            font-size: 14px;
+        }
+
+        nav a:hover {
+            color: var(--accent-soft);
+        }
+
+        .signin {
+            color: var(--accent-soft);
+        }
+
+
+        .page-title {
+            text-align: center;
+            margin: 30px 0;
+            letter-spacing: 3px;
+            color: var(--bg-dark);
+        }
+
+
+        .filters {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        select {
+            padding: 10px 14px;
+            margin: 0 10px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+        }
+
+
+        .product-list {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            align-items: center;
+            padding-bottom: 50px;
+        }
+
+
+        .product-card {
+            width: 90%;
+            max-width: 900px;
+            background: var(--bg-card);
+            border-radius: 14px;
+            padding: 22px;
+            display: grid;
+            grid-template-columns: 260px 1fr;
+            gap: 30px;
+            align-items: center;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+            transition: 0.3s;
+        }
+
+        .product-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25);
+        }
+
+        .product-card img {
+            width: 250px;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 12px;
+        }
+
+        .details label {
+            display: block;
+            margin: 8px 0;
+            font-size: 15px;
+            color: var(--text-muted);
+        }
+
+        .details strong {
+            color: var(--text-dark);
+            font-size: 17px;
+        }
+
+        .price {
+            font-size: 18px;
+            font-weight: bold;
+            color: var(--accent);
+        }
+
+
+        .buttons {
+            margin-top: 15px;
+        }
+
+        .buttons input {
+            padding: 9px 16px;
+            border-radius: 25px;
+            border: 1px solid var(--bg-dark);
+            background: transparent;
+            cursor: pointer;
+            margin-right: 8px;
+            font-weight: 600;
+        }
+
+        .buttons input[value="Buy"] {
+            background: var(--bg-dark);
+            color: var(--text-light);
+        }
+
+        .buttons input:hover {
+            background: var(--accent-soft);
+            border-color: var(--accent-soft);
+        }
+
+
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                gap: 12px;
+            }
+
+            nav {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .product-card {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .product-card img {
+                margin: 0 auto;
+            }
+        }
+
+        footer {
+            background: var(--bg-dark);
+            color: var(--text-light);
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        footer h2 {
+            letter-spacing: 4px;
+            margin-bottom: 25px;
+        }
+
+        footer nav a,
+        footer nav span {
+            color: #d2c7bc;
+            font-size: 14px;
+            margin: 0 12px;
+            text-decoration: none;
+        }
+
+        footer nav a:hover {
+            color: var(--accent-soft);
+        }
+
+        footer p {
+            margin-top: 25px;
+            font-size: 13px;
+            color: #b8ada2;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <header>
+        <div class="logo">
+            <img src="download.jpg" alt="Walk Wave Logo">
+            <h2>WALK WAVE</h2>
+        </div>
+
+        <nav>
+            <a href="footwear.html">HOME</a>
+            <a href="men.html">MEN</a>
+            <a href="women.html">WOMEN</a>
+            <a href="sale.html">SALE</a>
+            <a href="cart.html">🛒</a>
+            <a href="login.html" class="signin">Hello, Sign in</a>
+        </nav>
+    </header>
+
+
+    <h1 class="page-title">Look For Your Suitable Style</h1>
+
+
+    <div class="filters">
+        <select>
+            <option>Sort by</option>
+            <option>Price: Low to High</option>
+            <option>Price: High to Low</option>
+            <option>New Arrivals</option>
+        </select>
+
+        <select>
+            <option>Filter</option>
+            <option>Heels</option>
+            <option>Casuals</option>
+            <option>Formal</option>
+        </select>
+    </div>
+
+
+    <div class="product-list">
+
+        <div class="product-card">
+            <img src="5.jpg">
+            <div class="details">
+                <label><strong>Cocoa Charm Pointed Heels</strong></label>
+                <label>Classic brown pointed heels for elegance.</label>
+                <label class="price">₹3,499</label>
+                <div class="buttons">
+                    <input type="button" value="Buy">
+                    <input type="button" value="+">
+                    <input type="button" value="Wishlist">
+                </div>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <img src="15.jpg">
+            <div class="details">
+                <label><strong>Pearl Step Block Heels</strong></label>
+                <label>White open-toe block heels with comfort.</label>
+                <label class="price">₹2,999</label>
+                <div class="buttons">
+                    <input type="button" value="Buy">
+                    <input type="button" value="+">
+                    <input type="button" value="Wishlist">
+                </div>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <img src="8.jpg">
+            <div class="details">
+                <label><strong>Blush Muse Minimal Heels</strong></label>
+                <label>Minimal nude heels for daily elegance.</label>
+                <label class="price">₹3,569</label>
+                <div class="buttons">
+                    <input type="button" value="Buy">
+                    <input type="button" value="+">
+                    <input type="button" value="Wishlist">
+                </div>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <img src="9.jpg">
+            <div class="details">
+                <label><strong>Ivory Line Formal Loafers</strong></label>
+                <label>Elegant cream loafers for formal wear.</label>
+                <label class="price">₹3,499</label>
+                <div class="buttons">
+                    <input type="button" value="Buy">
+                    <input type="button" value="+">
+                    <input type="button" value="Wishlist">
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+<footer>
+    <h2>WALK WAVE</h2>
+    <nav>
+        <a href="about.html">About Us</a>
+        <span>Careers</span>
+        <span>Blogs</span>
+        <a href="contact.html">Contact</a>
+    </nav>
+    <p>© WalkWave.com</p>
+</footer>
+
+</html>

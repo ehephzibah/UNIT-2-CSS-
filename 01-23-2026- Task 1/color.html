@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Color & Background</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+        }
+
+
+        h1 {
+            color: #ff5733;
+        }
+
+        h2 {
+            color: rgb(60, 179, 113);
+        }
+
+        h3 {
+            color: hsl(210, 100%, 50%);
+        }
+
+
+        .bg-color {
+            background-color: lightblue;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+
+
+        .bg-image {
+            background-image: url('https://via.placeholder.com/300x100');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            padding: 50px;
+            color: white;
+            margin-bottom: 10px;
+        }
+
+
+        .bg-fixed {
+            background-image: url('https://via.placeholder.com/800x200');
+            background-attachment: fixed;
+            background-size: cover;
+            padding: 60px;
+            color: white;
+            margin-bottom: 10px;
+        }
+
+        .bg-gradient {
+            background: linear-gradient(to right, #ff7e5f, #feb47b);
+            padding: 30px;
+            color: white;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        .bg-radial {
+            background: radial-gradient(circle, #89f7fe, #66a6ff);
+            padding: 30px;
+            color: white;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Hex Color Example</h1>
+    <h2>RGB Color Example</h2>
+    <h3>HSL Color Example</h3>
+
+    <div class="bg-color">
+        Background Color Example
+    </div>
+
+    <div class="bg-image">
+        Background Image Example
+    </div>
+
+    <div class="bg-fixed">
+        Background Fixed Example
+    </div>
+
+    <div class="bg-gradient">
+        Linear Gradient Background
+    </div>
+
+    <div class="bg-radial">
+        Radial Gradient Background
+    </div>
+</body>
+
+</html>
