@@ -1,47 +1,47 @@
-# 🌐 UNIT-1: HTML & Introduction to Web Technologies
+# UNIT-1: HTML & Introduction to Web Technologies
 
 This repository contains my practical exercises, tasks, and mini projects completed as part of **Unit-1: HTML and Web Technologies**. It includes fundamental concepts of HTML, CSS, layout techniques, responsiveness, and a complete footwear brand website project.
 
 ---
 
-## 📚 Topics Covered
+##  Topics Covered
 
-### 🔹 HTML Fundamentals
+###  HTML Fundamentals
 - Basic HTML structure
 - Elements and attributes
 - Text formatting
 - Links and images
 - Lists and tables
 
-### 🔹 CSS Fundamentals
+###  CSS Fundamentals
 - Selectors (Basic & Advanced)
 - Colors and Typography
 - Text styling
 - Units (px, %, em, rem, vw, vh)
 
-### 🔹 Layout Techniques
+###  Layout Techniques
 - Box model
 - Display properties
 - Overflow control
 - Float and clear
 - Positioning
 
-### 🔹 Modern Layout Systems
+###  Modern Layout Systems
 - Flexbox
 - CSS Grid
 
-### 🔹 Responsive Design
+###  Responsive Design
 - Responsive layouts
 - Viewport units
 - Responsive images
 
-### 🔹 Visual Styling
+###  Visual Styling
 - Borders
 - Shadows
 - Effects
 - Icons and images
 
-### 🔹 Advanced CSS
+###  Advanced CSS
 - Transitions
 - Hover effects
 - Animations
@@ -50,7 +50,7 @@ This repository contains my practical exercises, tasks, and mini projects comple
 
 ---
 
-## 🧪 Tasks Included
+##  Tasks Included
 
 | Task | Topic |
 |-----|------|
@@ -65,7 +65,7 @@ This repository contains my practical exercises, tasks, and mini projects comple
 
 ---
 
-## 👟 Major Project: Footwear Brand Website
+##  Major Project: Footwear Brand Website
 
 A complete multi-page footwear website including:
 
@@ -88,7 +88,7 @@ A complete multi-page footwear website including:
 
 ---
 
-## 🛠 Technologies Used
+## Technologies Used
 
 - HTML5
 - CSS3
@@ -98,7 +98,7 @@ A complete multi-page footwear website including:
 
 ---
 
-## 🎯 Purpose
+##  Purpose
 
 This repository demonstrates my understanding of:
 
@@ -110,13 +110,13 @@ This repository demonstrates my understanding of:
 
 ---
 
-## 👩‍💻 Author
+## Author
 
 **Hephzibah E**  
 
 ---
 
-## 📌 Status
+##  Status
 
-✅ Completed – Unit 1 Web Technologies  
-📚 More units and projects will be added soon.
+ Completed – Unit 1 Web Technologies  
+More units and projects will be added soon.
